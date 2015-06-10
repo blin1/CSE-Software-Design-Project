@@ -61,13 +61,6 @@
             {{title}}
             </h3>
             <form action="#.php">
-              Type:
-              <div class="radio">
-              <input type="radio" name="type" value="one" id="one"><label for="one"><span></span>One-Variable</label>
-              <br/>
-              <input type="radio" name="type" value="two" id="two"><label for="two"><span></span>Two-Variable</label>
-              </div>
-              <br/>
               Data Set 1:
               <br/>
               <input type="text" name="data1" placeholder="1, 2, 3">
@@ -78,16 +71,16 @@
               <br/>
               Independent/Dependent:
               <div class="radio">
-              <input type="radio" name="mode" value="independ" id="independ"><label for="independ"><span></span>Independent</label>
+              <input type="radio" name="mode" value="independ" id="independ" checked><label for="independ"><span></span>Independent</label>
               <br/>
               <input type="radio" name="mode" value="depend" id="depend"><label for="depend"><span></span>Dependent</label>
               </div>
               <br/>
               Tail:
               <div class="radio">
-              <input type="radio" name="tails" value="one" id="one"><label for="one"><span></span>One-Tailed</label>
+              <input type="radio" name="tails" value="one" id="onetailed" checked><label for="onetailed"><span></span>One-Tailed</label>
               <br/>
-              <input type="radio" name="tails" value="two" id="two"><label for="two"><span></span>Two-Tailed</label>
+              <input type="radio" name="tails" value="two" id="twotailed"><label for="twotailed"><span></span>Two-Tailed</label>
               </div>
               <br/>
               <input type="submit" value="Submit">
