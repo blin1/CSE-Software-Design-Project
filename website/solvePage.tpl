@@ -2,45 +2,46 @@
   <head>
     <title>MATH</title>
       
-      <link rel = "stylesheet" type = "text/css" href = "style.css" />
-      <link rel = "shortcut icon" href = "icon.png" />
+      <link rel="stylesheet" type="text/css" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+      <link rel = "stylesheet" type = "text/css" href = "/static/style.css" />
+      <link rel = "shortcut icon" href = "/static/icon.png" />
       
-    <meta http-equiv = "content-type" content = "text/html; charset=UTF-8">
+      <meta http-equiv = "content-type" content = "text/html; charset=UTF-8">
     
-    <script src = "http://code.jquery.com/jquery-latest.js"></script>
+      <script src = "http://code.jquery.com/jquery-latest.js"></script>
 
-    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type = "text/javascript" src = "jquery.touchSwipe.min.js"></script>
-    <script type = "text/javascript" src = "javaScripts.js"></script>
+      <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+      <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script type = "text/javascript" src = "jquery.touchSwipe.min.js"></script>
+      <script type = "text/javascript" src = "/static/javaScripts.js"></script>
   </head>
   <body id="algebra1">
   <div class = "container">
    <div id = "sidebar">
       <ul class="navigation">
-        <li><a href = "homePage.html"> Home </a></li>
+        <li><a href = "/"> Home </a></li>
         <li><a id="algebra"> Algebra </a>
           <ul class="childNav">
-            <li><a href = "factorPage.html"> Factor </a></li>
-            <li><a href = "solvePage.html"> Solve </a></li>
-            <li><a href = "simplifyPage.html"> Simplify </a></li>
+            <li><a href = "/factor/"> Factor </a></li>
+            <li><a href = "/solve/"> Solve </a></li>
+            <li><a href = "/simplify/"> Simplify </a></li>
           </ul>
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
-            <li><a href = "riemannPage.html"> Riemann Sums </a></li>
-            <li><a href = "integralPage.html"> Integration </a></li>
-            <li><a href = "derivativePage.html"> Derivatives </a></li>
-            <li><a href = "tagentPage.html"> Tangent Line </a></li>
-            <li><a href = "maxminPage.html"> Maximum/Minimum </a></li>
+            <li><a href = "/riemann/"> Riemann Sums </a></li>
+            <li><a href = "/integral/"> Integration </a></li>
+            <li><a href = "/derivative/"> Derivatives </a></li>
+            <li><a href = "/tangent/"> Tangent Line </a></li>
+            <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
           </ul>
         </li>
         <li><a id="graphingNav"> Graphing </a>
           <ul class="childNav">
             <li><a href = "2DgraphingPage.html"> 2D Graphing </a></li>
             <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
-            <li><a href = "intersectionPage.html"> Intersection </a></li>
-            <li><a href = "holePage.html"> Hole/Asymptote </a></li>
+            <li><a href = "/intersection/"> Intersection </a></li>
+            <li><a href = "/holes/"> Hole/Asymptote </a></li>
           </ul>
         </li>
         <li><a id="dataNav"> Data Analysis </a></li>

@@ -49,7 +49,7 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-      <div class = "main-content">
+    <div class = "main-content">
         <div class = "swipe-area"></div>
         <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
           <span class = "bar"></span>
@@ -62,21 +62,9 @@
             {{title}}
             </h3>
             <form action="#.php">
-              Mode:
-              <br/>
-              <div class="radio">
-              <input type="radio" name="mode" value="number" id="number" onchange="hideB(this)"><label for="number"><span></span>Number</label>
-              <br/>
-              <input type="radio" name="mode" value="expression" id="expression" onchange="hideA(this)"><label for="expression"><span></span>Expression</label>
-              </div>
-              <br/>
               Input:
-              <div id="A">
-                <input type="number" step="any" name="number" class="no-step" placeholder="123456">
-              </div>
-              <div id="B">
-                <input type="text" name="expression" placeholder="x+2y+3z">
-              </div>
+              <br/>
+              <input type="text" name="exp" placeholder="x+2y+3z"> 
               <br/>
               <button class = "btn"> Submit </button>
             </form>

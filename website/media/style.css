@@ -132,14 +132,14 @@ body, html {
 	display: inline-block;
 	width: 16pt;
 	height: 16pt;
-	background: url("/static/box.png") left top no-repeat;
+	background: url("box.png") left top no-repeat;
 	margin:0 4px 0 0;
 	vertical-align: middle;
 	cursor: pointer;
 }
 
 .main-content .content input[type=radio]:checked + label span{
-	background: url("/static/check.png") left top no-repeat;
+	background: url("check.png") left top no-repeat;
 }
 
 

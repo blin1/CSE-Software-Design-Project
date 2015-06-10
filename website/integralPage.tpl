@@ -49,36 +49,37 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-      <div class = "main-content">
-        <div class = "swipe-area"></div>
-        <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
+			<div class = "main-content">
+				<div class = "swipe-area"></div>
+				<a href = "#" data-toggle = ".container" id = "sidebar-toggle">
+					<span class = "bar"></span>
+					<span class = "bar"></span>					
           <span class = "bar"></span>
-          <span class = "bar"></span>
-          <span class = "bar"></span>
-        </a>
-        <div class="content" id="pages">
+				</a>
+				<div class="content" id="pages">
           <div id="function">
             <h3>
-            {{title}}
+            {title}
             </h3>
             <form action="#.php">
-              Mode:
+              Equation:
               <br/>
+              y = <input type="text" name="function" placeholder="x+2y+3z">
               <div class="radio">
-              <input type="radio" name="mode" value="number" id="number" onchange="hideB(this)"><label for="number"><span></span>Number</label>
-              <br/>
-              <input type="radio" name="mode" value="expression" id="expression" onchange="hideA(this)"><label for="expression"><span></span>Expression</label>
+                <input type="radio" name="mode" value="definite" id="definite" onchange="hideB(this)" checked><label for="definite"><span></span>Definite</label>
+                <input type="radio" name="mode" value="indefinite" id="indefinite" onchange="hideA(this)"><label for="indefinite"><span></span>Indefinite</label>
               </div>
               <br/>
-              Input:
               <div id="A">
-                <input type="number" step="any" name="number" class="no-step" placeholder="123456">
+              Lower Bound:
+              <input type="number" step="any" name="start" class="no-step">
               </div>
               <div id="B">
-                <input type="text" name="expression" placeholder="x+2y+3z">
+              Upper Bound:
+              <input type="number" step="any" name="end" class="no-step">
               </div>
               <br/>
-              <button class = "btn"> Submit </button>
+               <button class = "btn"> Submit </button>
             </form>
             Answer: 
             <br>

@@ -62,21 +62,21 @@
             {{title}}
             </h3>
             <form action="#.php">
-              Mode:
+              Equation:
+              <br/>
+              y = <input type="text" name="function" placeholder="x+2y+3z">
               <br/>
               <div class="radio">
-              <input type="radio" name="mode" value="number" id="number" onchange="hideB(this)"><label for="number"><span></span>Number</label>
+              <input type="radio" name="mode" value="point" id="point" onchange="hideB(this)"><label for="point"><span></span>Point</label>
               <br/>
-              <input type="radio" name="mode" value="expression" id="expression" onchange="hideA(this)"><label for="expression"><span></span>Expression</label>
+              <input type="radio" name="mode" value="general" id="general" onchange="hideA(this)"><label for="general"><span></span>General</label>
               </div>
               <br/>
-              Input:
               <div id="A">
-                <input type="number" step="any" name="number" class="no-step" placeholder="123456">
+                x-coordinate:
+                <input type="number" step="any" name="xcoor" class="no-step" placeholder="1">
               </div>
-              <div id="B">
-                <input type="text" name="expression" placeholder="x+2y+3z">
-              </div>
+              <div id="B"></div>
               <br/>
               <button class = "btn"> Submit </button>
             </form>

@@ -9,10 +9,10 @@
     
     <script src = "http://code.jquery.com/jquery-latest.js"></script>
 
-    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type = "text/javascript" src = "jquery.touchSwipe.min.js"></script>
-    <script type = "text/javascript" src = "javaScripts.js"></script>
+      <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+      <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script type = "text/javascript" src = "jquery.touchSwipe.min.js"></script>
+      <script type = "text/javascript" src = "javaScripts.js"></script>
   </head>
   <body id="algebra1">
   <div class = "container">
@@ -48,32 +48,54 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-    <div class = "main-content">
+	<div class = "main-content">
         <div class = "swipe-area"></div>
         <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
           <span class = "bar"></span>
-          <span class = "bar"></span>
+          <span class = "bar"></span>         
           <span class = "bar"></span>
         </a>
         <div class="content" id="pages">
           <div id="function">
             <h3>
-            {{title}}
+            {title}
             </h3>
             <form action="#.php">
-              Input:
+              Equation:
               <br/>
-              <input type="text" name="exp1" placeholder="x+2y+3z"> 
-              = 
-              <input type="text" name="exp2" placeholder="x+2y+3z">
+              y = <input type="text" name="function" placeholder="x+2y+3z">
               <br/>
-              <button class = "btn"> Submit </button>
-              </form>
-              Answer: 
-              <br>
-              <div class=answer lang="latex">
-              {{answer}}
+              Lower Bound:
+              <br/>
+              <input type="number" step="any" name="start" class="no-step">
+              <br/>
+              Upper Bound:
+              <input type="number" step="any" name="end" class="no-step">
+              <br/>
+              Number of Intervals:
+              <input type="number" step="any" name="rekt" class="no-step">
+              <br/>
+              <div class="radio">
+              Mode:
+              <br/>
+              <input type="radio" name="mode" value="left" id="left"><label for="left"><span></span>Left</label>
+              <br/>
+              <input type="radio" name="mode" value="middle" id="middle"><label for="middle"><span></span>Middle</label>
+              <br/>
+              <input type="radio" name="mode" value="right" id="right"><label for="right"><span></span>Right</label>
+              <br/>
+              <input type="radio" name="mode" value="trapezoid" id="trapezoid"><label for="trapezoid"><span></span>Trapezoid</label>
               </div>
+              <br/>
+               <button class = "btn"> Submit </button>
+            </form>
+            Answer: 
+            <br>
+            <div class=answer lang="latex">
+            {{answer}}
+            </div>
+            <br/>
+            <img src="/static/riemann.jpg" alt="Riemann Picture"/>
           </div>
         </div>
     </div>

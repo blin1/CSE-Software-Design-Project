@@ -9,10 +9,10 @@
     
     <script src = "http://code.jquery.com/jquery-latest.js"></script>
 
-    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type = "text/javascript" src = "jquery.touchSwipe.min.js"></script>
-    <script type = "text/javascript" src = "javaScripts.js"></script>
+      <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+      <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script type = "text/javascript" src = "jquery.touchSwipe.min.js"></script>
+      <script type = "text/javascript" src = "javaScripts.js"></script>
   </head>
   <body id="algebra1">
   <div class = "container">
@@ -48,32 +48,48 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-    <div class = "main-content">
+      <div class = "main-content">
         <div class = "swipe-area"></div>
         <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
           <span class = "bar"></span>
-          <span class = "bar"></span>
+          <span class = "bar"></span>         
           <span class = "bar"></span>
         </a>
         <div class="content" id="pages">
           <div id="function">
             <h3>
-            {{title}}
+            T-Test
             </h3>
             <form action="#.php">
-              Input:
+              Data Set 1:
               <br/>
-              <input type="text" name="exp1" placeholder="x+2y+3z"> 
-              = 
-              <input type="text" name="exp2" placeholder="x+2y+3z">
+              <input type="text" name="data1" placeholder="1, 2, 3">
               <br/>
-              <button class = "btn"> Submit </button>
-              </form>
-              Answer: 
-              <br>
-              <div class=answer lang="latex">
-              {{answer}}
+              Data Set 2/Expected Mean:
+              <br/>
+              <input type="text" name="data2" placeholder="1, 2, 3">
+              <br/>
+              Independent/Dependent:
+              <div class="radio">
+              <input type="radio" name="mode" value="independ" id="independ" checked><label for="independ"><span></span>Independent</label>
+              <br/>
+              <input type="radio" name="mode" value="depend" id="depend"><label for="depend"><span></span>Dependent</label>
               </div>
+              <br/>
+              Tail:
+              <div class="radio">
+              <input type="radio" name="tails" value="one" id="onetailed" checked><label for="onetailed"><span></span>One-Tailed</label>
+              <br/>
+              <input type="radio" name="tails" value="two" id="twotailed"><label for="twotailed"><span></span>Two-Tailed</label>
+              </div>
+              <br/>
+              <input type="submit" value="Submit">
+            </form>
+            Answer: 
+            <br>
+            <div class=answer lang="latex">
+            {{answer}}
+            </div>
           </div>
         </div>
     </div>

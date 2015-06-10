@@ -48,34 +48,31 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-    <div class = "main-content">
-        <div class = "swipe-area"></div>
-        <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
-          <span class = "bar"></span>
-          <span class = "bar"></span>
-          <span class = "bar"></span>
-        </a>
-        <div class="content" id="pages">
+			<div class = "main-content">
+				<div class = "swipe-area"></div>
+				<a href = "#" data-toggle = ".container" id = "sidebar-toggle">
+					<span class = "bar"></span>
+					<span class = "bar"></span>
+					<span class = "bar"></span>
+				</a>
+				<div class="content">
           <div id="function">
             <h3>
-            {{title}}
+            2D Graphing
             </h3>
             <form action="#.php">
               Input:
               <br/>
-              <input type="text" name="exp1" placeholder="x+2y+3z"> 
+              <input type="text" name="expression1" placeholder="x+2y+3z"> 
               = 
-              <input type="text" name="exp2" placeholder="x+2y+3z">
-              <br/>
-              <button class = "btn"> Submit </button>
-              </form>
-              Answer: 
-              <br>
-              <div class=answer lang="latex">
-              {{answer}}
+              <input type="text" step="any" name="expression2" placeholder="x+2y+3z">
               </div>
-          </div>
+              <input type="submit" value="Submit">
+            </form>
+            <br/>
+            Answer: <span id="answer">{{answer}}</span>
+    			</div> 
         </div>
-    </div>
-  </body>
+		</div>
+	</body>
 </html>

@@ -49,14 +49,14 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-      <div class = "main-content">
-        <div class = "swipe-area"></div>
-        <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
-          <span class = "bar"></span>
-          <span class = "bar"></span>
-          <span class = "bar"></span>
-        </a>
-        <div class="content" id="pages">
+			<div class = "main-content">
+				<div class = "swipe-area"></div>
+				<a href = "#" data-toggle = ".container" id = "sidebar-toggle">
+					<span class = "bar"></span>
+					<span class = "bar"></span>
+					<span class = "bar"></span>
+				</a>
+				<div class="content" id="pages">
           <div id="function">
             <h3>
             {{title}}
@@ -85,8 +85,8 @@
             <div class=answer lang="latex">
             {{answer}}
             </div>
-          </div>
+    			</div>
         </div>
-    </div>
-  </body>
+		</div>
+	</body>
 </html>

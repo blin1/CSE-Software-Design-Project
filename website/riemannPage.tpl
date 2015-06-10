@@ -49,42 +49,54 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-      <div class = "main-content">
-        <div class = "swipe-area"></div>
-        <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
+			<div class = "main-content">
+				<div class = "swipe-area"></div>
+				<a href = "#" data-toggle = ".container" id = "sidebar-toggle">
+					<span class = "bar"></span>
+					<span class = "bar"></span>					
           <span class = "bar"></span>
-          <span class = "bar"></span>
-          <span class = "bar"></span>
-        </a>
-        <div class="content" id="pages">
+				</a>
+				<div class="content" id="pages">
           <div id="function">
             <h3>
-            {{title}}
+            {title}
             </h3>
             <form action="#.php">
-              Mode:
+              Equation:
+              <br/>
+              y = <input type="text" name="function" placeholder="x+2y+3z">
+              <br/>
+              Lower Bound:
+              <br/>
+              <input type="number" step="any" name="start" class="no-step">
+              <br/>
+              Upper Bound:
+              <input type="number" step="any" name="end" class="no-step">
+              <br/>
+              Number of Intervals:
+              <input type="number" step="any" name="rekt" class="no-step">
               <br/>
               <div class="radio">
-              <input type="radio" name="mode" value="number" id="number" onchange="hideB(this)"><label for="number"><span></span>Number</label>
+              Mode:
               <br/>
-              <input type="radio" name="mode" value="expression" id="expression" onchange="hideA(this)"><label for="expression"><span></span>Expression</label>
+              <input type="radio" name="mode" value="left" id="left"><label for="left"><span></span>Left</label>
+              <br/>
+              <input type="radio" name="mode" value="middle" id="middle"><label for="middle"><span></span>Middle</label>
+              <br/>
+              <input type="radio" name="mode" value="right" id="right"><label for="right"><span></span>Right</label>
+              <br/>
+              <input type="radio" name="mode" value="trapezoid" id="trapezoid"><label for="trapezoid"><span></span>Trapezoid</label>
               </div>
               <br/>
-              Input:
-              <div id="A">
-                <input type="number" step="any" name="number" class="no-step" placeholder="123456">
-              </div>
-              <div id="B">
-                <input type="text" name="expression" placeholder="x+2y+3z">
-              </div>
-              <br/>
-              <button class = "btn"> Submit </button>
+               <button class = "btn"> Submit </button>
             </form>
             Answer: 
             <br>
             <div class=answer lang="latex">
             {{answer}}
             </div>
+            <br/>
+            <img src="/static/riemann.jpg" alt="Riemann Picture"/>
           </div>
         </div>
     </div>

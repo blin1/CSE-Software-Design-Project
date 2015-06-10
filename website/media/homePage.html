@@ -9,10 +9,9 @@
     
     <script src = "http://code.jquery.com/jquery-latest.js"></script>
 
-    <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
-    <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type = "text/javascript" src = "jquery.touchSwipe.min.js"></script>
-    <script type = "text/javascript" src = "javaScripts.js"></script>
+      <script type = "text/javascript" src = "http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script type = "text/javascript" src = "jquery.touchSwipe.min.js"></script>
+      <script type = "text/javascript" src = "javaScripts.js"></script>
   </head>
   <body id="algebra1">
   <div class = "container">
@@ -48,34 +47,22 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-    <div class = "main-content">
-        <div class = "swipe-area"></div>
-        <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
-          <span class = "bar"></span>
-          <span class = "bar"></span>
-          <span class = "bar"></span>
-        </a>
-        <div class="content" id="pages">
-          <div id="function">
-            <h3>
-            {{title}}
-            </h3>
-            <form action="#.php">
-              Input:
-              <br/>
-              <input type="text" name="exp1" placeholder="x+2y+3z"> 
-              = 
-              <input type="text" name="exp2" placeholder="x+2y+3z">
-              <br/>
-              <button class = "btn"> Submit </button>
-              </form>
-              Answer: 
-              <br>
-              <div class=answer lang="latex">
-              {{answer}}
-              </div>
-          </div>
-        </div>
-    </div>
-  </body>
+		<div class = "main-content" style="text-align:center">
+			<div class = "swipe-area"></div>
+			<a href = "#" data-toggle = ".container" id = "sidebar-toggle">
+				<span class = "bar"></span>
+				<span class = "bar"></span>
+				<span class = "bar"></span>
+			</a>
+			<div class = "content">
+				<h1>
+					MATH
+				</h1>
+				<img src = "logo.png" id = "logo" alt = "Logo"/>
+				<h2>  
+					Multifunctional Analysis Tool and Helper
+				</h2>
+			</div>
+		</div>
+	</body>
 </html>
