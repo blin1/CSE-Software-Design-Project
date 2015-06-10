@@ -49,7 +49,7 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-		  <div class = "main-content">
+			  <div class = "main-content">
         <div class = "swipe-area"></div>
         <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
           <span class = "bar"></span>
@@ -62,28 +62,21 @@
             {{title}}
             </h3>
             <form action="#.php">
-              Equation:
+              Function 1: y1 = 
+                <input type="text" name="function1" placeholder="x+2x">
               <br/>
-              y = <input type="text" name="function" placeholder="x+2x">
-              <br/>
-              Lower Bound:
-              <br/>
-              <input type="number" step="any" name="start" class="no-step">
-              <br/>
-              Upper Bound:
-              <input type="number" step="any" name="end" class="no-step">
-              <br/>
-              <button class = "btn"> Submit </button>
-              </form>
-              Answer: 
-              <br>
-              <div class=answer lang="latex">
-              {{answer}}
-              </div>
-              <br/>
-              <img src="/static/figure.jpg" alt="Graph">
+              Function 2: y2 =
+               <input type="text" name="function2" placeholder="x+2x">
+               <br/>
+               <button class = "btn"> Submit </button>
+            </form>
+            Answer: 
+            <br>
+            <div class=answer lang="latex">
+            {{answer}}
+            </div>
+            <br/>
+            <img src="/static/figure.jpg" alt="Graph">
           </div>
         </div>
     </div>
-  </body>
-</html>

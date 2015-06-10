@@ -31,7 +31,7 @@
             <li><a href = "riemannPage.html"> Riemann Sums </a></li>
             <li><a href = "integralPage.html"> Integration </a></li>
             <li><a href = "derivativePage.html"> Derivatives </a></li>
-            <li><a href = "tagentPage.html"> Tangent Line </a></li>
+            <li><a href = "tangentPage.html"> Tangent Line </a></li>
             <li><a href = "maxminPage.html"> Maximum/Minimum </a></li>
           </ul>
         </li>
@@ -41,6 +41,7 @@
             <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
             <li><a href = "intersectionPage.html"> Intersection </a></li>
             <li><a href = "holePage.html"> Hole/Asymptote </a></li>
+            <li><a href = "arclenPage.html"> Arc Length </a></li>
           </ul>
         </li>
         <li><a id="dataNav"> Data Analysis </a></li>
@@ -48,7 +49,7 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-    <div class = "main-content">
+			<div class = "main-content">
         <div class = "swipe-area"></div>
         <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
           <span class = "bar"></span>
@@ -61,11 +62,16 @@
             {{title}}
             </h3>
             <form action="#.php">
-              Input:
+              Equation:
               <br/>
-              <input type="text" name="exp1" placeholder="x+2y+3z"> 
-              = 
-              <input type="text" name="exp2" placeholder="x+2y+3z">
+              y = <input type="text" name="expression" placeholder="x+2x">
+              <br/>
+              Lower Bound:
+              <br/>
+              <input type="number" step="any" name="start" class="no-step">
+              <br/>
+              Upper Bound:
+              <input type="number" step="any" name="end" class="no-step">
               <br/>
               <button class = "btn"> Submit </button>
               </form>
@@ -74,6 +80,8 @@
               <div class=answer lang="latex">
               {{answer}}
               </div>
+              <br/>
+              <img src="/static/arclen.jpg" alt="Arc Length Graph">
           </div>
         </div>
     </div>

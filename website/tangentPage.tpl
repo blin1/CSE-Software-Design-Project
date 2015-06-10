@@ -23,25 +23,25 @@
         <li><a id="algebra"> Algebra </a>
           <ul class="childNav">
             <li><a href = "/factor/"> Factor </a></li>
-            <li><a href = "/solve/"> Solve </a></li>
             <li><a href = "/simplify/"> Simplify </a></li>
+            <li><a href = "/solve/"> Solve </a></li>
           </ul>
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
-            <li><a href = "/riemann/"> Riemann Sums </a></li>
-            <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/derivative/"> Derivatives </a></li>
-            <li><a href = "/tangent/"> Tangent Line </a></li>
+            <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
+            <li><a href = "/riemann/"> Riemann Sums </a></li>
+            <li><a href = "/tangent/"> Tangent Line </a></li>
           </ul>
         </li>
         <li><a id="graphingNav"> Graphing </a>
           <ul class="childNav">
             <li><a href = "2DgraphingPage.html"> 2D Graphing </a></li>
             <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
+            <li><a href = "/holes/"> Holes </a></li>
             <li><a href = "/intersection/"> Intersection </a></li>
-            <li><a href = "/holes/"> Hole/Asymptote </a></li>
           </ul>
         </li>
         <li><a id="dataNav"> Data Analysis </a></li>
@@ -64,7 +64,7 @@
             <form action="#.php">
               Equation:
               <br/>
-              y = <input type="text" name="function" placeholder="x+2y+3z">
+              y = <input type="text" name="function" placeholder="x+2x">
               <br/>
               x-coordinate:
               <input type="number" step="any" name="xcoor" class="no-step" placeholder="1">

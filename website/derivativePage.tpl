@@ -23,25 +23,25 @@
         <li><a id="algebra"> Algebra </a>
           <ul class="childNav">
             <li><a href = "/factor/"> Factor </a></li>
-            <li><a href = "/solve/"> Solve </a></li>
             <li><a href = "/simplify/"> Simplify </a></li>
+            <li><a href = "/solve/"> Solve </a></li>
           </ul>
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
-            <li><a href = "/riemann/"> Riemann Sums </a></li>
-            <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/derivative/"> Derivatives </a></li>
-            <li><a href = "/tangent/"> Tangent Line </a></li>
+            <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
+            <li><a href = "/riemann/"> Riemann Sums </a></li>
+            <li><a href = "/tangent/"> Tangent Line </a></li>
           </ul>
         </li>
         <li><a id="graphingNav"> Graphing </a>
           <ul class="childNav">
             <li><a href = "2DgraphingPage.html"> 2D Graphing </a></li>
             <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
+            <li><a href = "/holes/"> Holes </a></li>
             <li><a href = "/intersection/"> Intersection </a></li>
-            <li><a href = "/holes/"> Hole/Asymptote </a></li>
           </ul>
         </li>
         <li><a id="dataNav"> Data Analysis </a></li>
@@ -64,10 +64,12 @@
             <form action="#.php">
               Equation:
               <br/>
-              y = <input type="text" name="function" placeholder="x+2y+3z">
+              y = <input type="text" name="function" placeholder="x+2x">
               <br/>
               <div class="radio">
-              <input type="radio" name="mode" value="point" id="point" onchange="hideB(this)"><label for="point"><span></span>Point</label>
+              Mode:
+              <br/>
+              <input type="radio" name="mode" value="point" id="point" onchange="hideB(this)" checked><label for="point"><span></span>Point</label>
               <br/>
               <input type="radio" name="mode" value="general" id="general" onchange="hideA(this)"><label for="general"><span></span>General</label>
               </div>

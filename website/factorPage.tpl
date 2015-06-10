@@ -23,25 +23,25 @@
         <li><a id="algebra"> Algebra </a>
           <ul class="childNav">
             <li><a href = "/factor/"> Factor </a></li>
-            <li><a href = "/solve/"> Solve </a></li>
             <li><a href = "/simplify/"> Simplify </a></li>
+            <li><a href = "/solve/"> Solve </a></li>
           </ul>
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
-            <li><a href = "/riemann/"> Riemann Sums </a></li>
-            <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/derivative/"> Derivatives </a></li>
-            <li><a href = "/tangent/"> Tangent Line </a></li>
+            <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
+            <li><a href = "/riemann/"> Riemann Sums </a></li>
+            <li><a href = "/tangent/"> Tangent Line </a></li>
           </ul>
         </li>
         <li><a id="graphingNav"> Graphing </a>
           <ul class="childNav">
             <li><a href = "2DgraphingPage.html"> 2D Graphing </a></li>
             <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
+            <li><a href = "/holes/"> Holes </a></li>
             <li><a href = "/intersection/"> Intersection </a></li>
-            <li><a href = "/holes/"> Hole/Asymptote </a></li>
           </ul>
         </li>
         <li><a id="dataNav"> Data Analysis </a></li>
@@ -65,7 +65,7 @@
               Mode:
               <br/>
               <div class="radio">
-              <input type="radio" name="mode" value="number" id="number" onchange="hideB(this)"><label for="number"><span></span>Number</label>
+              <input type="radio" name="mode" value="number" id="number" onchange="hideB(this)" checked><label for="number"><span></span>Number</label>
               <br/>
               <input type="radio" name="mode" value="expression" id="expression" onchange="hideA(this)"><label for="expression"><span></span>Expression</label>
               </div>

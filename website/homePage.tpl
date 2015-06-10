@@ -23,25 +23,25 @@
         <li><a id="algebra"> Algebra </a>
           <ul class="childNav">
             <li><a href = "/factor/"> Factor </a></li>
-            <li><a href = "/solve/"> Solve </a></li>
             <li><a href = "/simplify/"> Simplify </a></li>
+            <li><a href = "/solve/"> Solve </a></li>
           </ul>
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
-            <li><a href = "/riemann/"> Riemann Sums </a></li>
-            <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/derivative/"> Derivatives </a></li>
-            <li><a href = "/tangent/"> Tangent Line </a></li>
+            <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
+            <li><a href = "/riemann/"> Riemann Sums </a></li>
+            <li><a href = "/tangent/"> Tangent Line </a></li>
           </ul>
         </li>
         <li><a id="graphingNav"> Graphing </a>
           <ul class="childNav">
             <li><a href = "2DgraphingPage.html"> 2D Graphing </a></li>
             <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
+            <li><a href = "/holes/"> Holes </a></li>
             <li><a href = "/intersection/"> Intersection </a></li>
-            <li><a href = "/holes/"> Hole/Asymptote </a></li>
           </ul>
         </li>
         <li><a id="dataNav"> Data Analysis </a></li>
@@ -49,44 +49,22 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-			<div class = "main-content">
-				<div class = "swipe-area"></div>
-				<a href = "#" data-toggle = ".container" id = "sidebar-toggle">
-					<span class = "bar"></span>
-					<span class = "bar"></span>
-					<span class = "bar"></span>
-				</a>
-				<div class="content" id="pages">
-          <div id="function">
-            <h3>
-            {{title}}
-            </h3>
-            <form action="#.php">
-              Mode:
-              <br/>
-              <div class="radio">
-              <input type="radio" name="mode" value="number" id="number" onchange="hideB(this)"><label for="number"><span></span>Number</label>
-              <br/>
-              <input type="radio" name="mode" value="expression" id="expression" onchange="hideA(this)"><label for="expression"><span></span>Expression</label>
-              </div>
-              <br/>
-              Input:
-              <div id="A">
-                <input type="number" step="any" name="number" class="no-step" placeholder="123456">
-              </div>
-              <div id="B">
-                <input type="text" name="expression" placeholder="x+2y+3z">
-              </div>
-              <br/>
-              <button class = "btn"> Submit </button>
-            </form>
-            Answer: 
-            <br>
-            <div class=answer lang="latex">
-            {{answer}}
-            </div>
-    			</div>
-        </div>
-		</div>
-	</body>
+      <div class = "main-content" style="text-align:center">
+      <div class = "swipe-area"></div>
+      <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
+        <span class = "bar"></span>
+        <span class = "bar"></span>
+        <span class = "bar"></span>
+      </a>
+      <div class = "content">
+        <h1>
+          MATH
+        </h1>
+        <img src = "logo.png" id = "logo" alt = "Logo"/>
+        <h2>  
+          Multifunctional Analysis Tool and Helper
+        </h2>
+      </div>
+    </div>
+  </body>
 </html>
