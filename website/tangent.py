@@ -11,14 +11,15 @@ import numpy as np
 
 x = Symbol('x')
 
-def tangentLine(expression,a,b): # Parameters are expression, x-coordinate, y-coordinate
-    a=float(a)
-    b=float(b)
+def tangentLine(expression,a): # Parameters are expression, x-coordinate, y-coordinate
+    exp = sympify(expression)
+    a = float(a)
+    b = exp.subs(x,a)
     y = expression
     yprime = diff(y,x) #Derivative of expression
     f = lambdify(x, yprime, 'numpy')
     slope=f(a) #Substitutes x-coord for x in derivative for slope
-    intercept= b-slope*a #Calculates y-intercept of the line
+    intercept= round(b-slope*a,6) #Calculates y-intercept of the line
     if slope==0: #Returns the tangent line as an expression in a string
         if intercept==0: 
             return str(slope)+"0"

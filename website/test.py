@@ -67,11 +67,95 @@ def simplify():
     title = 'Simplify'
     answer = '0'
     exp = request.query.expression
+    exp = exp.encode('utf8')
     if exp == '':
         exp = '0'
-    exp = exp.encode('utf8')
     answer = sym.simplify(exp)
     return template('simplifyPage.tpl', title = title, answer = answer)
+
+@route('/arclen/')
+def arclen():
+    title = 'Arc Length'
+    answer = '0'
+    function = request.query.function
+    start = request.query.start
+    end = request.query.end
+
+    function = function.encode('utf8')
+    start = start.encode('utf8')
+    end = end.encode('utf8')
+
+    if function and start and end != '':
+        answer = arc.arclen(function, start, end)    
+    else:
+        answer = 'Please fill in all fields.'
+
+    return template('arclenPage.tpl', title=title, answer=answer)
+
+@route('/derivative/')
+def derivative():
+    title = 'Derivative'
+    answer = '0'
+    function = request.query.function
+    mode = request.query.mode
+    xcoor = request.query.xcoor
+    
+    function = function.encode('utf8')
+    mode = mode.encode('utf8')
+    xcoor = xcoor.encode('utf8')
+
+    if function and mode != '':
+        if mode == 'general':
+            answer = diff.diffgeneral(function)
+        if mode == 'point' and xcoor != '':
+            answer = diff.diffpt(function,xcoor)
+    else:
+        answer = 'Please fill in all fields.'
+
+    return template('derivativePage.tpl', title = title, answer = answer)
+
+@route('/integral/')
+def integral():
+    title = 'Integration'
+    answer = '0'
+    function = request.query.function
+    mode = request.query.mode
+    start = request.query.start
+    end = request.query.end
+    
+    function = function.encode('utf8')
+    mode = mode.encode('utf8')
+    start = start.encode('utf8')
+    end = end.encode('utf8')
+    
+    if function and mode != '':
+        if mode == 'indefinite':
+            answer = inte.indefinite(function)
+        if mode == 'definite' and start and end != '':
+            answer = inte.definite(function,start,end)
+    else:
+        answer = 'Please fill in all fields.'
+
+    return template('integralPage.tpl', title=title, answer=answer)
+
+@route('/maxmin/')
+def maxmin():
+    title = 'Maximum/Minimum'
+    answer = '0'
+    function = request.query.function
+    start = request.query.start
+    end = request.query.end
+    
+    function = function.encode('utf8')
+    start = start.encode('utf8')
+    end = end.encode('utf8')
+
+    if function and start and end != '':
+        answer = mm.max_min(function, start, end)    
+    else:
+        answer = 'Please fill in all fields.'
+
+    return template('maxminPage.tpl', title=title, answer=answer)
 
 @route('/riemann/')
 def riemann():
@@ -99,128 +183,42 @@ def riemann():
 
     return template('riemannPage.tpl', title = title, answer = answer)
 
-@route('/integral/')
-def integral():
-    title = 'Integration'
-    answer = '0'
-    function = request.query.function
-    mode = request.query.mode
-    start = request.query.start
-    end = request.query.end
-    
-    function = function.encode('utf8')
-    mode = mode.encode('utf8')
-    start = start.encode('utf8')
-    end = end.encode('utf8')
-    
-    if function and mode != '':
-        if mode == 'indefinite':
-            answer = inte.indefinite(function)
-        if mode == 'definite' and start and end != '':
-            answer = inte.definite(function,start,end)
-    else:
-        answer = 'Please fill in all fields.'
-
-    return template('integralPage.tpl', title=title, answer=answer)
-
-
-@route('/derivative/')
-def derivative():
-    title = 'Derivative'
-    answer = '0'
-    function = request.query.function
-    mode = request.query.mode
-    xcoor = request.query.xcoor
-    ycoor = request.query.ycoor
-    
-    function = function.encode('utf8')
-    mode = mode.encode('utf8')
-    xcoor = xcoor.encode('utf8')
-    ycoor = ycoor.encode('utf8')
-
-    if function and mode != '':
-        if mode == 'general':
-            answer = diff.diffgeneral(function)
-        if mode == 'point' and xcoor and ycoor != '':
-            answer = diff.diffpt(function,xcoor,ycoor)
-    else:
-        answer = 'Please fill in all fields.'
-
-    return template('derivativePage.tpl', title=title, answer=answer)
-
 @route('/tangent/')
 def tangent():
     title = 'Tangent Line'
     answer = '0'
     function = request.query.function
     xcoor = request.query.xcoor
-    ycoor = request.query.ycoor
     
     function = function.encode('utf8')
     xcoor = xcoor.encode('utf8')
-    ycoor = ycoor.encode('utf8')
 
-    if function and xcoor and ycoor != '':
-        answer = tan.tangentLine(function,xcoor,ycoor)    
+    if function and xcoor != '':
+        answer = tan.tangentLine(function, xcoor)    
     else:
         answer = 'Please fill in all fields.'
 
-    return template('tangentPage.tpl', title=title, answer=answer)
+    return template('tangentPage.tpl', title = title, answer = answer)
 
-@route('/maxmin/')
-def maxmin():
-    title = 'Maximum/Minimum'
-    answer = '0'
+@route('/2d/')
+def twod():
+    title = '2D Graphing'
+    mode = request.query.function
     function = request.query.function
-    start = request.query.start
-    end = request.query.end
-    
+
+    mode = mode.encode('utf8')
     function = function.encode('utf8')
-    start = start.encode('utf8')
-    end = end.encode('utf8')
 
-    if function and start and end != '':
-        answer = mm.max_min(function, start, end)    
+    if mode == 'graph':
+        if function != '':
+            answer = 'Graphed'
+            graph.graph_general(function, -50, 50, name = '2d.png')
+        else:
+            answer = 'Please fill in all fields.'    
     else:
-        answer = 'Please fill in all fields.'
-
-    return template('maxminPage.tpl', title=title, answer=answer)
-
-@route('/intersection/')
-def intersection():
-    title = 'Intersection'
-    answer = '0'
-    function1 = request.query.function1
-    function2 = request.query.function2
-    
-    function1 = function1.encode('utf8')
-    function2 = function2.encode('utf8')
-
-    if function1 and function2 != '':
-        answer = inter.intersection(function1, function2)    
-    else:
-        answer = 'Please fill in all fields.'
-
-    return template('intersectionPage.tpl', title=title, answer=answer)
-
-@route('/arclen/')
-def arclen():
-    title = 'Arc Length'
-    answer = '0'
-    function = request.query.function
-    start = request.query.start
-    end = request.query.end
-
-    function = function.encode('utf8')
-    start = start.encode('utf8')
-    end = end.encode('utf8')
-
-    if function and start and end != '':
-        answer = arc.arclen(function, start, end)    
-    else:
-        answer = 'Please fill in all fields.'
-
-    return template('arclenPage.tpl', title=title, answer=answer)
+        answer = 'Cleared'
+        
+    return template('2dPage.tpl', title = title, answer = answer)
 
 @route('/holes/')
 def holes():
@@ -240,10 +238,27 @@ def holes():
         answer = 'Please fill in all fields.'
 
     return template('holesPage.tpl', title=title, answer=answer)
+
+@route('/intersection/')
+def intersection():
+    title = 'Intersection'
+    answer = '0'
+    function1 = request.query.function1
+    function2 = request.query.function2
+    
+    function1 = function1.encode('utf8')
+    function2 = function2.encode('utf8')
+
+    if function1 and function2 != '':
+        answer = inter.intersection(function1, function2)    
+    else:
+        answer = 'Please fill in all fields.'
+
+    return template('intersectionPage.tpl', title=title, answer=answer)
     
 @route('/static/<filename>')
 def server_static(filename):
-    return static_file(filename, root = 'C:/Users/student/Documents/midterm2')
+    return static_file(filename, root = 'C:/Users/Blain/Documents/CSE-Software-Design-Project-master/website')
 
 run(host='localhost', port=8080, debug=True, reloader=True)
 #browser url http://localhost:8080/

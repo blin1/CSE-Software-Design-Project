@@ -12,6 +12,7 @@ import numpy
 x = Symbol('x') # define 'x' string as x for use in functions
 
 def intersection(exp1,exp2):
+    plt.clf()
     
     exp1=sympify(exp1) # convert expressions to usable form
     exp2=sympify(exp2)
@@ -19,13 +20,13 @@ def intersection(exp1,exp2):
     exp=exp1-exp2 
     solution=solve(exp) # solve for points of intersection
     
-    #minval=min(solution) # determine highest and lowest x value to scale graph
-    #maxval=max(solution)
+    minval=min(solution) # determine highest and lowest x value to scale graph
+    maxval=max(solution)
     
-    '''if minval==maxval: # if only 1 solution, use default graph size of [-25,25]
+    if minval==maxval: # if only 1 solution, use default graph size of [-25,25]
         diff=25
     else: # if multiple solutions, space solutions appropriately
-        diff=maxval-minval'''
+        diff=maxval-minval
         
     points=[] # initialize points list
     
@@ -35,12 +36,7 @@ def intersection(exp1,exp2):
         yvalue=str(yvalue)
         points.append(sympify('('+value+','+yvalue+")"))
     
-    if points == []:
-        return "No intersection"
-    else:    
-        return points # return all solutions 
-
-    '''a = numpy.linspace(minval-diff,maxval+diff,100) # 100 linearly spaced numbers
+    a = numpy.linspace(minval-diff,maxval+diff,100) # 100 linearly spaced numbers
     b=[]
     
     for item in a: #compute values for expression 1
@@ -51,9 +47,20 @@ def intersection(exp1,exp2):
     
     for item in a: # compute values for expression 2
        d.append(exp2.subs(x,item))  
-       
+    
+    plt.gca()  
     plt.plot(a,b) #graph both data sets
     plt.plot(c,d)
     
     for point in points: #highlight intersection points with enlarged cyan dots
-        plt.plot(point[0],point[1],'co') '''
+        plt.plot(point[0],point[1],'co')
+        
+    plt.savefig('inter.png')
+    
+    if points == []:
+        return "No intersection"
+    else:    
+        return points # return all solutions 
+
+    
+   

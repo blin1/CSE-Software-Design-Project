@@ -90,6 +90,6 @@ def graph_max_min(formula_sym,derivative):
     col4 = ax1.plot(a,b) #plot graph for function
     plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
     
-    plt.savefig('maxmin.jpg')
+    plt.savefig('maxmin.png')
  
 

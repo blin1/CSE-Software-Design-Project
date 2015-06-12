@@ -11,9 +11,8 @@ import numpy as np
 
 #This function will return the derivative of a function at a point
 
-def diffpt(expression,a,b): #The expression as a string, then x and y coordinates
+def diffpt(expression,a): #The expression as a string, then x and y coordinates
     a=float(a)
-    b=float(b)
     x = Symbol('x')
     y = expression
     yprime = diff(y,x)
