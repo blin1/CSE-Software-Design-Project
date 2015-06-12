@@ -64,7 +64,7 @@
             <form action="#.php">
               Input:
               <br/>
-              <input type="text" name="exp" placeholder="x+2y+3z"> 
+              <input type="text" name="expression" placeholder="x+2y+3z"> 
               <br/>
               <button class = "btn"> Submit </button>
             </form>
