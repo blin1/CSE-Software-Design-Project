@@ -55,24 +55,30 @@
 					<span class = "bar"></span>
 					<span class = "bar"></span>
 				</a>
-				<div class="content">
+			 <div class="content" id="pages">
           <div id="function">
             <h3>
-            2D Graphing
+            {{title}}
             </h3>
             <form action="#.php">
               Input:
+              y = 
+                <input type="text" name="function1" placeholder="x+2x">
               <br/>
-              <input type="text" name="expression1" placeholder="x+2y+3z"> 
-              = 
-              <input type="text" step="any" name="expression2" placeholder="x+2y+3z">
-              </div>
-              <input type="submit" value="Submit">
+               <br/>
+               <button class = "btn"> Submit </button>
+               <br/><br/>
+               <input type="reset" value="Reset">
             </form>
+            Answer: 
+            <br>
+            <div class=answer lang="latex">
+            {{answer}}
+            </div>
             <br/>
-            Answer: <span id="answer">{{answer}}</span>
-    			</div> 
+            <img src="/static/2dgraph.jpg" alt="2D Graph">
+          </div>
         </div>
-		</div>
-	</body>
-</html>
+    </div>
+  </body>
+    </html>

@@ -29,6 +29,7 @@
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
+            <li><a href = "/arclength/"> Arc Length </a></li>
             <li><a href = "/derivative/"> Derivatives </a></li>
             <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
@@ -57,18 +58,19 @@
           <span class = "bar"></span>
         </a>
         <div class="content" id="pages">
-          <div id="function">
+        <div id="function">
             <h3>
             {{title}}
             </h3>
             <form action="#.php">
-              Function 1: y1 = 
+              Input:
+              y = 
                 <input type="text" name="function1" placeholder="x+2x">
               <br/>
-              Function 2: y2 =
-               <input type="text" name="function2" placeholder="x+2x">
                <br/>
                <button class = "btn"> Submit </button>
+               <br/><br/>
+               <input type="reset" value="Reset">
             </form>
             Answer: 
             <br>
@@ -76,8 +78,9 @@
             {{answer}}
             </div>
             <br/>
-            <img src="/static/figure.jpg" alt="Graph">
+            <img src="/static/2dgraph.jpg" alt="2D Graph">
           </div>
         </div>
     </div>
+  </body>
     </html>

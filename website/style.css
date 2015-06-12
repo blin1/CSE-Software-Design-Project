@@ -167,7 +167,7 @@ body, html {
 	box-shadow: 0 0 5px 1px #007AFF;
 }
 
-button.btn {
+input[type="reset"], button.btn {
 	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
 	box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -188,7 +188,7 @@ button.btn {
 	text-decoration:none;
 }
 
-button.btn:hover {
+input[type="reset"]:hover, button.btn:hover {
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
 	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
 	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
@@ -199,7 +199,7 @@ button.btn:hover {
 	background-color:#f6f6f6;
 }
 
-button.btn:active {
+input[type="reset"]:active, button.btn:active {
 	position:relative;
 	top:1px;
 }
