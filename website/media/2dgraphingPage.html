@@ -60,15 +60,24 @@
             <h3>
             {{title}}
             </h3>
-            <form action="#.php">
-              Input:
-              y = 
-                <input type="text" name="function1" placeholder="x+2x">
+         <form action="#.php">
+              Mode:
               <br/>
-               <br/>
-               <button class = "btn"> Submit </button>
-               <br/><br/>
-               <input type="reset" value="Reset">
+              <div class="radio">
+              <input type="radio" name="mode" value="graph" id="graph" onchange="hideB(this)" checked><label for="graph"><span></span>Graph</label>
+              <br/>
+              <input type="radio" name="mode" value="reset" id="reset" onchange="hideA(this)"><label for="reset"><span></span>Reset</label>
+              </div>
+              <br/>
+                            <div id="A">
+                              Equation:
+                              <br/>
+                              y = <input type="text" name="expression" placeholder="x+2x">
+              </div>
+              <div id="B">
+              </div>
+              <br/>
+              <button class = "btn"> Submit </button>
             </form>
             Answer: 
             <br>
@@ -76,9 +85,9 @@
             {{answer}}
             </div>
             <br/>
-            <img src="/static/2dgraph.jpg" alt="2D Graph">
+            <img src="/static/2d.png" alt="2D Graph">
           </div>
         </div>
     </div>
   </body>
-    </html>
+  </html>

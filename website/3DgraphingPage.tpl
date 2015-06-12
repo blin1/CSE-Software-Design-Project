@@ -74,7 +74,7 @@
                             <div id="A">
                               Equation:
                               <br/>
-                              y = <input type="text" name="expression" placeholder="x+2x">
+                              z = <input type="text" name="expression" placeholder="x+2x">
               </div>
               <div id="B">
               </div>
@@ -87,7 +87,7 @@
             {{answer}}
             </div>
             <br/>
-            <img src="/static/2d.png" alt="2D Graph">
+            <img src="/static/3d.png" alt="3D Graph">
           </div>
         </div>
     </div>
