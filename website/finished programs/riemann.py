@@ -26,7 +26,7 @@ def riemann(a, b, n, l, f):
         x += f(a + (i+offset)*w)
         plt.gca().add_patch(matplotlib.patches.Rectangle((i*w + a,0),w,f(a + (i+offset)*w)))
         plt.plot(numRange, y, color=(1.0, 0.00, 0.00), zorder=5)
-    plt.savefig('riemann.png')
+    plt.savefig('riemann.jpg')
     s = w * x
     return s
 

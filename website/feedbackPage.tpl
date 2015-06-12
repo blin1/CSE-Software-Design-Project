@@ -44,13 +44,14 @@
             <li><a href = "/intersection/"> Intersection </a></li>
           </ul>
         </li>
-        <li><a id="dataNav"> Data Analysis </a></li>
-        <li><a href = "helpPage.html" id="helpNav"> Help </a></li>
-        <li><a id="helpNav"> Help </a></li>
+       <li><a id="dataNav"> Data Analysis </a></li>
+        <li><a id="helpNav"> Help </a>
           <ul class="childNav">
-          <li><a href = "programPage.html"> Program Documentation </a></li>
-          <li><a href = "feedbackPage.html"> Feedback </a></li>
+          <li><a href = "/program/"> Program Documentation </a></li>
+          <li><a href = "/feedback/"> Feedback </a></li>
       </ul>
+    </li>
+  </ul>
     </div>
 			  <div class = "main-content">
         <div class = "swipe-area"></div>

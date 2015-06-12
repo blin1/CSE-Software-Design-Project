@@ -1,10 +1,10 @@
 from sympy import *
 import matplotlib.pyplot as plt
 import numpy
+from mayavi.mlab import *
 import solver as solv
 from pylab import *
 from matplotlib.patches import Polygon
-from mayavi.mlab import *
 
 def graph_general(expression, lower, upper, color_in = 'blue', name = 'figure.jpg'): #Graphs functions and holes in a range
     x = Symbol('x')
@@ -50,13 +50,13 @@ def graph_3d(expression, range_x, range_y): #Graphs 3D surfaces
         for e in range(0,points_y):
             list_z.append(f(list_x[d],list_y[e]))
         array_z.append(list_z)
-    mesh(array_x, array_y, array_z, colormap="cool") #Creates surface using x, y, and z arrays
+    mesh(array_x, array_y, array_z, colormap="bone") #Creates surface using x, y, and z arrays
     axes(nb_labels = 5) #Adds axes
-    savefig('mesh.png') #Saves image
+    savefig('mesh.jpg') #Saves image
 
 def clear_mesh():
     clf() #Clears canvas
-    savefig('mesh.png') #Saves blank image
+    savefig('mesh.jpg') #Saves blank image
     
 def find_hole(expression,lower,upper): #Finds the holes of a function in a range
     x = Symbol("x")

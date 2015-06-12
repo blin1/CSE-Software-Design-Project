@@ -203,7 +203,7 @@ def tangent():
 @route('/2d/')
 def twod():
     title = '2D Graphing'
-    mode = request.query.mode
+    mode = request.query.function
     function = request.query.function
 
     mode = mode.encode('utf8')
@@ -217,30 +217,8 @@ def twod():
             answer = 'Please fill in all fields.'    
     else:
         answer = 'Cleared'
-        graph.clear_fig(name = '2d.png')
         
     return template('2dPage.tpl', title = title, answer = answer)
-
-@route('/3d/')
-def threed():
-    title = '3D Graphing'
-    mode = request.query.mode
-    function = request.query.function
-
-    mode = mode.encode('utf8')
-    function = function.encode('utf8')
-
-    if mode == 'graph':
-        if function != '':
-            answer = 'Graphed'
-            graph.graph_3d(function, [-10,10],[-10,10])
-        else:
-            answer = 'Please fill in all fields.'    
-    else:
-        answer = 'Cleared'
-        graph.clear_mesh()
-        
-    return template('3dPage.tpl', title = title, answer = answer)
 
 @route('/holes/')
 def holes():
@@ -278,31 +256,6 @@ def intersection():
 
     return template('intersectionPage.tpl', title=title, answer=answer)
     
-@route('feedback')
-def feedback():
-    title='Feedback'
-    return template(feedback.tpl)
-
-'''@route('/data/')
-def data():
-    title = 'Data Analysis'
-    answer = 'Please fill in data set(s).'
-    data1 = request.query.data1
-    data2 = request.query.data2
-    mode = request.query.mode
-    tails = request.query.tails
-
-    data1= data1.encode('utf8')
-    data2 = data2.encode('utf8')
-    mode = mode.encode('utf8')
-    tails = tails.encode('utf8')
-
-    if data1 != '':
-        answer = data.data_a(data1,data2,mode,tails)
-        return template('ttestPage.tpl', title=title, answer=answer)
-    else:
-        answer = 'Please fill in at least one data set.'
-'''    
 @route('/static/<filename>')
 def server_static(filename):
     return static_file(filename, root = 'C:/Users/Blain/Documents/CSE-Software-Design-Project-master/website')

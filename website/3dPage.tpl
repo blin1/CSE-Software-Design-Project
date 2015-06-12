@@ -29,7 +29,7 @@
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
-            <li><a href = "/arclen/"> Arc Length </a></li>
+            <li><a href = "/arclength/"> Arc Length </a></li>
             <li><a href = "/derivative/"> Derivatives </a></li>
             <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
@@ -50,7 +50,7 @@
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-    <div class = "main-content">
+			  <div class = "main-content">
         <div class = "swipe-area"></div>
         <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
           <span class = "bar"></span>
@@ -58,24 +58,36 @@
           <span class = "bar"></span>
         </a>
         <div class="content" id="pages">
-          <div id="function">
+        <div id="function">
             <h3>
             {{title}}
             </h3>
-            <form action="#.php">
-              Input:
+             <form action="#.php">
+              Mode:
               <br/>
-              <input type="text" name="exp1" placeholder="x+2y+3z"> 
-              = 
-              <input type="text" name="exp2" placeholder="x+2y+3z">
+              <div class="radio">
+              <input type="radio" name="mode" value="graph" id="graph" onchange="hideB(this)" checked><label for="graph"><span></span>Graph</label>
+              <br/>
+              <input type="radio" name="mode" value="reset" id="reset" onchange="hideA(this)"><label for="reset"><span></span>Reset</label>
+              </div>
+              <br/>
+                            <div id="A">
+                              Equation:
+                              <br/>
+                              z = <input type="text" name="function" placeholder="x+2x">
+              </div>
+              <div id="B">
+              </div>
               <br/>
               <button class = "btn"> Submit </button>
-              </form>
-              Answer: 
-              <br>
-              <div class=answer lang="latex">
-              {{answer}}
-              </div>
+            </form>
+            Answer: 
+            <br>
+            <div class=answer lang="latex">
+            {{answer}}
+            </div>
+            <br/>
+            <img src="/static/mesh.png" alt="3D Graph">
           </div>
         </div>
     </div>

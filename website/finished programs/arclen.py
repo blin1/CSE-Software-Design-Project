@@ -14,6 +14,6 @@ def arclen(expression,lower,upper):
     upper = float(upper)
     derivative = sy.diff(expression,x)
     result = integrate(math.sqrt(1+(derivative**2)), (x,lower,upper))
-    graph_general(expression, lower-5,upper+5, "red", "arclen.png")
-    graph_general(expression,lower,upper, "blue", "arclen.png")
+    graph_general(expression, lower-5,upper+5, "red", "arclen.jpg")
+    graph_general(expression,lower,upper, "blue", "arclen.jpg")
     return result

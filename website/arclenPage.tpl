@@ -39,18 +39,18 @@
         </li>
         <li><a id="graphingNav"> Graphing </a>
           <ul class="childNav">
-            <li><a href = "/2d/"> 2D Graphing </a></li>
-            <li><a href = "/3d/"> 3D Graphing </a></li>
+            <li><a href = "2DgraphingPage.html"> 2D Graphing </a></li>
+            <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
             <li><a href = "/holes/"> Holes </a></li>
             <li><a href = "/intersection/"> Intersection </a></li>
           </ul>
         </li>
-        <li><a id="dataNav" href = '/data/'> Data Analysis </a></li>
+        <li><a id="dataNav"> Data Analysis </a></li>
         <li><a href = "helpPage.html" id="helpNav"> Help </a></li>
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
     </div>
-    <div class = "main-content">
+		  <div class = "main-content">
         <div class = "swipe-area"></div>
         <a href = "#" data-toggle = ".container" id = "sidebar-toggle">
           <span class = "bar"></span>
@@ -63,11 +63,16 @@
             {{title}}
             </h3>
             <form action="#.php">
-              Input:
+              Equation:
               <br/>
-              <input type="text" name="exp1" placeholder="x+2y+3z"> 
-              = 
-              <input type="text" name="exp2" placeholder="x+2y+3z">
+              y = <input type="text" name="function" placeholder="x+2x">
+              <br/>
+              Lower Bound:
+              <br/>
+              <input type="number" step="any" name="start" class="no-step">
+              <br/>
+              Upper Bound:
+              <input type="number" step="any" name="end" class="no-step">
               <br/>
               <button class = "btn"> Submit </button>
               </form>
@@ -76,6 +81,8 @@
               <div class=answer lang="latex">
               {{answer}}
               </div>
+              <br/>
+              <img src="/static/arclen.jpg" alt="Arc Length Graph">
           </div>
         </div>
     </div>

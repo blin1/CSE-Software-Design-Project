@@ -29,6 +29,7 @@
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
+            <li><a href = "/arclen/"> Arc Length </a></li>
             <li><a href = "/derivative/"> Derivatives </a></li>
             <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
@@ -38,13 +39,13 @@
         </li>
         <li><a id="graphingNav"> Graphing </a>
           <ul class="childNav">
-            <li><a href = "2DgraphingPage.html"> 2D Graphing </a></li>
-            <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
+            <li><a href = "/2d/"> 2D Graphing </a></li>
+            <li><a href = "/3d/"> 3D Graphing </a></li>
             <li><a href = "/holes/"> Holes </a></li>
             <li><a href = "/intersection/"> Intersection </a></li>
           </ul>
         </li>
-        <li><a id="dataNav"> Data Analysis </a></li>
+        <li><a id="dataNav" href = '/data/'> Data Analysis </a></li>
         <li><a href = "helpPage.html" id="helpNav"> Help </a></li>
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
@@ -68,8 +69,6 @@
               <br/>
               x-coordinate:
               <input type="number" step="any" name="xcoor" class="no-step" placeholder="1">
-              y-coordinate:
-              <input type="number" step="any" name="ycoor" class="no-step" placeholder="1">
               <br/>
               <button class = "btn"> Submit </button>
             </form>

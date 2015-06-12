@@ -29,6 +29,7 @@
         </li>
         <li><a id="calculusNav"> Calculus </a>
           <ul class="childNav">
+            <li><a href = "/arclen/"> Arc Length </a></li>
             <li><a href = "/derivative/"> Derivatives </a></li>
             <li><a href = "/integral/"> Integration </a></li>
             <li><a href = "/maxmin/"> Maximum/Minimum </a></li>
@@ -38,13 +39,13 @@
         </li>
         <li><a id="graphingNav"> Graphing </a>
           <ul class="childNav">
-            <li><a href = "2DgraphingPage.html"> 2D Graphing </a></li>
-            <li><a href = "3DgraphingPage.html"> 3D Graphing </a></li>
+            <li><a href = "/2d/"> 2D Graphing </a></li>
+            <li><a href = "/3d/"> 3D Graphing </a></li>
             <li><a href = "/holes/"> Holes </a></li>
             <li><a href = "/intersection/"> Intersection </a></li>
           </ul>
         </li>
-        <li><a id="dataNav"> Data Analysis </a></li>
+        <li><a id="dataNav" href = '/data/'> Data Analysis </a></li>
         <li><a href = "helpPage.html" id="helpNav"> Help </a></li>
         <li><a href = "programPage.html" id="programNav"> Program Info </a></li>
       </ul>
@@ -64,7 +65,7 @@
             <form action="#.php">
               Equation:
               <br/>
-              y = <input type="text" name="function" placeholder="x+2x">
+              y = <input type="text" name="expression" placeholder="x+2x">
               <br/>
               Lower Bound:
               <br/>
@@ -80,6 +81,7 @@
             <div class=answer lang="latex">
             {{answer}}
             </div>
+            <br/>
             <img src="/static/holes.png" alt="Holes Graph">
           </div>
         </div>
